@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Glowny Layout zawiera w sobie caly ekran aplikacji -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="pl.edu.kasprzak.graestoperem.GraActivity"
+    android:weightSum="1">
+
+    <!-- Etykieta z id clock. Sluzy, do wyswietlania wartosci licznika -->
+    <TextView
+        android:id="@+id/clock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clock" />
+
+    <!-- Przycisk -->
+    <!-- BRAK ELEMENTU (1) -->
+
+
+    <!-- Calosc miejsca pod przyciskiem zawira kolejne elementy obok siebie (horizontal) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!-- Pierwszy element w layoucie pod przyciskiem jest kolejnym layoutem, w ktorym elementy beda umieszczone jeden pod drugim (vertical) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <!-- W tym layoucie umieszczamy prosty text, bedacy naglowkiem -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last tries" />
+
+            <!-- Oraz kolejny layout, tym razem pusty, ktory uzupelniany jest podczas dzialania programu (runtime) -->
+            <!-- BRAK ELEMENTU (2) -->
+
+        </LinearLayout>
+
+        <!-- Drugi element w layoucie pod przyciskiem -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+		<!-- BRAK ELEMENTU (3) -->
+
+            <!-- Analogicznie, do poprzedniego przypadku umieszczamy  tutaj prosty text, bedacy naglowkiem -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Best tries" />
+			<!-- BRAK ELEMENTU (4) -->
+
+            <!-- Oraz kolejny layout do uzupelnienia w przez uruchomiony kod java -->
+            <LinearLayout
+                android:id="@+id/bestTriesList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+			</LinearLayout>
+			<!-- BRAK ELEMENTU (5) -->
+		</LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
